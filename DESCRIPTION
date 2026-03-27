@@ -1,4 +1,4 @@
-Package: gs-utils
+Package: gsutils
 Title: Various utilities to make life slightly easier
 Version: 0.0.1
 Authors@R: 
