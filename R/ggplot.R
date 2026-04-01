@@ -3,6 +3,9 @@ util_defaults$DEFAULT_WIDTH = 6.5
 util_defaults$DEFAULT_HEIGHT = 3.5
 util_defaults$DEFAULT_FILE_NAME = 'preview.svg'
 
+#' Preview ggplot file
+#'
+#' @export
 ggprev = function(file_name = util_defaults$DEFAULT_FILE_NAME,
                   width = util_defaults$DEFAULT_WIDTH,
                   height = util_defaults$DEFAULT_HEIGHT,
@@ -11,12 +14,18 @@ ggprev = function(file_name = util_defaults$DEFAULT_FILE_NAME,
   if (open) browseURL(file_name)
 }
 
+#' Update already previewed ggplot file
+#'
+#' @export
 ggupd = function(file_name = util_defaults$DEFAULT_FILE_NAME,
                  width = util_defaults$DEFAULT_WIDTH,
                  height = util_defaults$DEFAULT_HEIGHT) {
   ggprev(file_name = file_name, width = width, height = height, open = FALSE)
 }
 
+#' Defines a custom ggplot theme
+#'
+#' @export
 theme_custom = function() {
   ggprism::theme_prism(base_size = 8) +
     theme(
