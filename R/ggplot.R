@@ -31,5 +31,6 @@ theme_custom = function() {
     theme(
       text = element_text(size = 22),
       axis.title.y = element_text(size = 18, margin = margin(r = 20)),
+      axis.title.x = element_text(size = 18, margin = margin(t = 20)),
     )
 }
