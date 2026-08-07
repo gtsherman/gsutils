@@ -11,7 +11,7 @@ ggprev = function(file_name = util_defaults$DEFAULT_FILE_NAME,
                   height = util_defaults$DEFAULT_HEIGHT,
                   open = TRUE) {
   ggplot2::ggsave(file_name, width = width, height = height, units = 'in', dpi = 300)
-  if (open) browseURL(file_name)
+  if (open) utils::browseURL(file_name)
 }
 
 #' Update already previewed ggplot file
@@ -28,9 +28,9 @@ ggupd = function(file_name = util_defaults$DEFAULT_FILE_NAME,
 #' @export
 theme_custom = function() {
   ggprism::theme_prism(base_size = 8) +
-    theme(
-      text = element_text(size = 22),
-      axis.title.y = element_text(size = 18, margin = margin(r = 20)),
-      axis.title.x = element_text(size = 18, margin = margin(t = 20)),
+    ggplot2::theme(
+      text = ggplot2::element_text(size = 22),
+      axis.title.y = ggplot2::element_text(size = 18, margin = margin(r = 20)),
+      axis.title.x = ggplot2::element_text(size = 18, margin = margin(t = 20)),
     )
 }
