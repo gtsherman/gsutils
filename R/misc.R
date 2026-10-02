@@ -16,3 +16,11 @@ anonymize = function(df, col, char_length = 10) {
                     digest::getVDigest('sha1')({{ col }}),
                     end = char_length)))
 }
+
+#' Source an entire directory
+#'
+#' @export
+sourceDir = function(directory) {
+  list.files(directory, pattern = "\\.R$", full.names = TRUE) %>%
+    lapply(source)
+}
